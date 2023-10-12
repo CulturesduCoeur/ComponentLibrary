@@ -1,0 +1,64 @@
+:host {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid 1px red; */
+}
+
+.cdc-main-button {
+  display: flex;
+  z-index: 5;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  height: 4.1em;
+  padding: 0 0.3em;
+  border-radius: 4em;
+  transition: 0.4s ease-in-out;
+  box-shadow: 4px 8px 13px rgba(0, 0, 0, 0.2);
+}
+
+.cdc-main-button div {
+  transition: 0.4s ease-in-out;
+  height: 3.5em;
+  width: 3.5em;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cdc-main-button div svg {
+  width: 50%;
+  height: 50%;
+}
+.cdc-main-button .delete-button.active {
+  background: #e31515;
+  cursor: grab;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 9.5em;
+  justify-content: center;
+}
+p {
+  text-align: center;
+}
+
+@media screen and (max-width: 1050px) {
+  :host {
+    left: 50%;
+    bottom: 3em;
+    transform: translate3d(-50%, 0%, 0px);
+    z-index: 1000;
+  }
+  p {
+    display: none;
+  }
+}

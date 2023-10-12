@@ -1,0 +1,70 @@
+:host {
+  display: block;
+}
+
+.cdc-main-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.first-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22em;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.second-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40em;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+main {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 16em 1fr;
+  grid-template-rows: 4em 1fr;
+}
+
+@media screen and (max-width: 1050px) {
+  .first-svg {
+    width: 20em;
+  }
+  .second-svg {
+    width: 30em;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .first-svg {
+    width: 15em;
+  }
+  .second-svg {
+    width: 20em;
+  }
+  main {
+    grid-template-rows: 5em 1fr;
+  }
+}

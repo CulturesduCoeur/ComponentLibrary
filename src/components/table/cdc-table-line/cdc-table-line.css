@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  justify-content: flex-start;
+  height: 4em;
+  background: white;
+  gap: 1em;
+  width: 100%;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin: 1em 0;
+}
+
+@media screen and (max-width: 650px) {
+  :host {
+    width: calc(100% - 1.6em);
+  }
+}

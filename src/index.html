@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/cdc-library.esm.js"></script>
+    <script nomodule src="/build/cdc-library.js"></script>
+    <style>
+      body,
+      html {
+        overscroll-behavior: none;
+      }
+      .content {
+        overflow-y: scroll;
+        overflow-x: auto;
+        padding: var(--content-top-padding) 0;
+      }
+
+      h1,
+      H2,
+      h3,
+      h4,
+      p,
+      h5 {
+        margin: 0;
+      }
+      main-button-modify div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      cdc-table-line img {
+        height: 100%;
+        background: grey;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 0.5em;
+      }
+
+      cdc-table-line .line-text {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5em;
+      }
+
+      cdc-table-line .line-text > * {
+        min-width: 15%;
+      }
+      cdc-table-line .button-row {
+        display: flex;
+        width: 30%;
+        margin-left: auto;
+        justify-content: flex-end;
+      }
+      cdc-table-line h4,
+      cdc-table-line p,
+      cdc-table-line span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      cdc-table-line h4 {
+        width: 30%;
+      }
+      cdc-table-line p {
+        width: 20%;
+      }
+
+      cdc-search-input input {
+        display: none;
+      }
+      cdc-search-input cdc-table-line {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <cdc-app>
+      <!-- ** Header ** -->
+      <cdc-header>
+        <a href="#"><img src="./assets/icons/cdc-logo.png" alt="main logo" /></a>
+        <div class="right-side">
+          <a href="#"><img src="./assets/icons/Notification.svg" alt="notif" /></a>
+          <a href="#">
+            <div style="background: grey; border-radius: 50%; width: 2.5em; height: 2.5em" class="profil-button"></div>
+          </a>
+        </div>
+      </cdc-header>
+
+      <!-- ** Nav ** -->
+      <cdc-nav>
+        <section class="events">
+          <div class="title-row">
+            <h3>événements</h3>
+            <plus-button></plus-button>
+          </div>
+          <a href="#">Accueil</a>
+          <a href="#">Vos événements</a>
+          <a href="#">Brouillons</a>
+          <a href="#">Tous les événements</a>
+        </section>
+        <section class="activity">
+          <div class="title-row">
+            <h3>activités</h3>
+            <plus-button></plus-button>
+          </div>
+          <a href="#">Accueil</a>
+          <a href="#">Vos activités</a>
+          <a href="#">Modèles</a>
+          <a href="#">Toutes les activités</a>
+        </section>
+        <section class="struct">
+          <div class="title-row">
+            <h3>structures</h3>
+            <plus-button></plus-button>
+          </div>
+          <a href="#">Tous mes relais</a>
+          <a href="#">Tous mes partenaires</a>
+          <a href="#">Tous les CdC</a>
+        </section>
+      </cdc-nav>
+
+      <!-- ** Content ** -->
+      <div class="content">
+        <cdc-searc
+      </div>
+      <main-button-save  isvalid="true" onClick="onSubmit()"
+      ><p>Enregistrer</p></main-button-save
+    >
+    <cdc-date-picker>
+      <input type="date" name="DATE_DEBUT" value="11/05/2020 00:00:00"/>
+    </cdc-date-picker>
+  </main>
+    </cdc-app>
+    <cdc-modal />
+  </body>
+  <script>
+    window.onload = () => {
+      const select = document.getElementById('test');
+      setTimeout(() => {
+        console.log("coucou")
+        select.options[2].selected = true;
+        select.dispatchEvent(new Event('change'));
+      }, 400)
+    };
+  </script>
+</html>

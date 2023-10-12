@@ -1,0 +1,20 @@
+:host {
+  background: #f5f5f5;
+  width: calc(100% - 2em);
+  min-height: 3em;
+  border-radius: 20px;
+  display: grid;
+  padding: 1em;
+  grid-template-columns: repeat(auto-fit, 14em);
+  grid-gap: 2em;
+}
+
+@media screen and (max-width: 650px) {
+  :host {
+    width: calc(100% - 0.5em);
+    justify-content: center;
+    padding: 1em 0.25em;
+    grid-template-columns: repeat(auto-fit, 9em);
+    gap: 1em;
+  }
+}

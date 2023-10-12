@@ -1,0 +1,85 @@
+:host {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  color: white;
+  background: rgba(37, 37, 37, 0.2);
+  padding: 0.4em;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+}
+
+.cdc-main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.1em;
+  height: 4.1em;
+  border-radius: 50%;
+  background: #c4c4c4;
+  transition: 0.2s ease-in-out;
+}
+
+.cdc-main-button .valid {
+  width: 65%;
+}
+
+.cdc-main-button.active {
+  background: #68d457;
+  cursor: pointer;
+  box-shadow: 4px 8px 13px rgba(0, 0, 0, 0.2);
+}
+
+.cdc-main-button.active .valid {
+  stroke-dasharray: 497;
+  stroke-dashoffset: 1000;
+}
+.cdc-main-button.active:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.2);
+}
+.cdc-main-button.active:hover .valid {
+  animation: draw 400ms ease-in-out;
+}
+
+.cdc-main-button .loading {
+  animation: turnAround 1s infinite cubic-bezier(0.39, 0.62, 0.81, 0.74);
+}
+
+@media screen and (max-width: 1050px) {
+  :host {
+    left: 50%;
+    bottom: 3em;
+    transform: translate3d(-50%, 0%, 0px);
+    z-index: 1000;
+  }
+  p {
+    display: none;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 950;
+  }
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes turnAround {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

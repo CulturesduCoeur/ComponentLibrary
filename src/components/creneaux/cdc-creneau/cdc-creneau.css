@@ -1,0 +1,93 @@
+:host {
+  display: block;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+  font-family: 'Source Sans Pro';
+  font-size: 0.8em;
+  margin-top: -0.5em;
+}
+
+.creneau {
+  position: relative;
+  box-sizing: border-box;
+  width: 14em;
+  height: 7em;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+  border-radius: 15px;
+  background: white;
+}
+
+.creneau.selected {
+  border: 5px solid #404040;
+}
+
+.right-button {
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.right-button.delete {
+  border: solid 2px #e31515;
+}
+
+.right-button.delete svg {
+  width: 60%;
+  height: 60%;
+}
+
+.right-button.selected {
+  border: solid 2px #404040;
+}
+
+.right-button.selected svg {
+  width: 70%;
+  height: 70%;
+  transform: rotate(45deg);
+}
+
+.content {
+  width: calc(100% - 1em);
+  height: calc(100% -1em);
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+.content .seats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .seats-row .reservation-wrapper {
+  display: flex;
+  align-items: center;
+  height: 2em;
+}
+
+.content .seats-row .reservation-wrapper svg {
+  height: 80%;
+  width: 80%;
+  margin-right: 0.3em;
+}
+.content .seats-row .total-seats-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+@media screen and (max-width: 650px) {
+  .creneau {
+    width: 9em;
+  }
+}

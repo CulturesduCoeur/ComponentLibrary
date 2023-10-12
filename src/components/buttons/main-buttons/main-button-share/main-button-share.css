@@ -1,0 +1,37 @@
+:host {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cdc-main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #68d457;
+  width: 4.1em;
+  height: 4.1em;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 4px 8px 13px rgba(0, 0, 0, 0.2);
+}
+
+.cdc-main-button:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cdc-main-button svg {
+  width: 50%;
+  height: 50%;
+  margin-top: -0.3em;
+}
+
+.cdc-main-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}

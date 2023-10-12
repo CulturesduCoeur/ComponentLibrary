@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 0.5rem 0px;
+}
+
+p {
+  font-family: 'Source Sans pro', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.checkbox-wrapper {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  border-radius: 2px;
+  border: solid 2px #404040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.checkbox-wrapper .dot {
+  width: 0.4em;
+  height: 0.4em;
+  background: #404040;
+  border-radius: 1px;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.checkbox-wrapper.active .dot {
+  opacity: 1;
+  transform: scale(2);
+}
+
+@media screen and (max-width: 650px) {
+  p {
+    font-size: 0.8em;
+  }
+}

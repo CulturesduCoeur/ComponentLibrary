@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media screen and (max-width: 1050px) {
+  :host {
+    z-index: 100;
+    position: fixed;
+    width: 350px;
+    height: 60px;
+    overflow: hidden;
+    left: 50%;
+    bottom: 20px;
+    transform: translate3d(-50%, 0, 0);
+    background: white;
+    border-radius: 10px;
+  }
+}

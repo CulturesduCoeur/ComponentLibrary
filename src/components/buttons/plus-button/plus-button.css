@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  color: white;
+  background: grey;
+}
+
+svg {
+  width: .7em;
+  stroke: white;
+}

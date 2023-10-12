@@ -1,0 +1,84 @@
+:host {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+p,
+h2 {
+  font-family: 'Source Sans pro', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+.pages-wrapper {
+  margin-left: 13em;
+  display: flex;
+  align-items: center;
+}
+
+.pages-wrapper div {
+  display: flex;
+  align-items: center;
+}
+
+.pages-wrapper button {
+  background: none;
+  border: none;
+  height: 1em;
+  cursor: pointer;
+}
+.pages-wrapper button.prev svg {
+  height: 100%;
+  transform: rotate(90deg);
+}
+.pages-wrapper button.next svg {
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+.pages-wrapper div h2 {
+  margin: 0.25em;
+  font-weight: 400;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.pages-wrapper div h2.active {
+  font-weight: 800;
+  opacity: 1;
+}
+.goToPage-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 2em;
+}
+
+.goToPage-wrapper input {
+  margin-left: 0.5em;
+  height: 1.5em;
+  border: solid 1px grey;
+  width: 3em;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 650px) {
+  :host {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pages-wrapper {
+    margin-left: unset;
+  }
+  .goToPage-wrapper {
+    flex-shrink: 0;
+    margin-left: unset;
+  }
+}
